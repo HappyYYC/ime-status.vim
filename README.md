@@ -26,6 +26,10 @@ SendMessage(ImmGetDefaultIMEWnd(GetForegroundWindow()), WM_IME_CONTROL, 0x0006, 
 
 Rime 关闭输入法之后再开启，无法记住关闭之前的输入法状态，会自动转为中文模式，相关问题：[关闭/打开输入法，ascii_mode会强制变为中文状态 · Issue #581 · rime/weasel · GitHub](https://github.com/rime/weasel/issues/581)
 
+## Misc
+
+通过 `Ctrl+C` 退出 Insert 模式不会关闭输入法，所以如果一直都处在英文输入环境，可以通过此方式退出 Insert 模式，否则会遇到 Rime 被关闭再打开时会自动变成中文输入，得手动切换为英文输入的情况。
+
 ## Acknowledgements
 
 感谢 [fcitx.vim](https://github.com/lilydjwg/fcitx.vim)、[fcitx-remote-for-windows](https://github.com/cute-jumper/fcitx-remote-for-windows)、[Neur1n/neuims](https://github.com/Neur1n/neuims) 项目提供的想法！
